@@ -42,7 +42,7 @@ int main() {
         recv(client_socket, buffer, MAX_MSG_SIZE, 0);
         printf("Server: %s\n", buffer);
 
-        if (strcasecmp("Exit", buffer) == 0)
+        if (strncmp("Exit", buffer, 4) == 0)
             break;
     }
 

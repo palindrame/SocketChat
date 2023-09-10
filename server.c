@@ -54,7 +54,7 @@ int main() {
         fgets(buffer, MAX_MSG_SIZE, stdin);
         send(new_socket, buffer, strlen(buffer), 0);
 
-        if(strcasecmp("Exit", buffer) == 0)
+        if(strncmp("Exit", buffer, 4) == 0)
             break;
     }
 
